@@ -1,0 +1,10 @@
+local file
+    
+    local importSuccess, importResult = pcall(function()
+        file = plugin:ImportFile("*.json", "Select reupload_map.json")
+    end)
+
+    if not importSuccess then
+        warn("[Reuploader Plugin] File import failed or was cancelled:", importResult)
+        return
+    end
