@@ -1,0 +1,12 @@
+-- 1. Get necessary services
+local HttpService
+
+local success, result = pcall(function()
+    HttpService = game:GetService("HttpService")
+end)
+
+if not success then
+    warn("[Reuploader Plugin] ERROR: HttpService is not available or enabled! " .. result)
+    warn("Please enable HttpService in Game Settings > Security > Allow HTTP Requests")
+    return
+end
